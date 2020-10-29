@@ -14,8 +14,8 @@ import retrofit2.http.Query
 const val API_KEY = "cccf617d082948b2820d2b26262789c9"
 
 interface RAWGApiService {
-    @GET("games?")
-    fun getVideoGameSearchAsync(
+    @GET("games")
+  suspend fun getVideoGameSearchAsync(
         @Query("search") VideoGameName: String
     ): GameSearchResponse
     // Kotlin doesn't support Java-like static class members.
@@ -31,7 +31,7 @@ interface RAWGApiService {
                 //Get the current url
                     .url()
                     .newBuilder()
-                    .addQueryParameter("appid", API_KEY)
+                    .addQueryParameter("key", API_KEY)
                     .build()
 
                 // Set the update
@@ -49,7 +49,6 @@ interface RAWGApiService {
             return Retrofit.Builder()
                 .client(okHttpClient)
                 .baseUrl("https://api.rawg.io/api/")
-                    //
                 //.addCallAdapterFactory(CoroutineCallAdapterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()

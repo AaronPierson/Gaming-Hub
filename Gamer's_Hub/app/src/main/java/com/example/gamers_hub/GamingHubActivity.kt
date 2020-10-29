@@ -18,7 +18,7 @@ class GamingHubActivity : AppCompatActivity() {
         GlobalScope.launch {
           val response = RAWGApiService()
               .getVideoGameSearchAsync("pikmin")
-            //placeholder_textview.text = response.results[0].name.toString()
+           placeholder_textview.text = response.results[0].released.toString()
         }
 
     }
