@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GamersHub.MainPage"
+             Title="New and trending"
+             Appearing="ContentPage_Appearing">
+            
+    <StackLayout>
+
+        <Label Text="New and trending" FontSize="Title" BackgroundColor="Gray"
+               Margin="0" Padding="20"></Label>
+        <SearchBar Placeholder="Hello" FontAttributes="Bold" 
+                   BackgroundColor="Gray"/>
+
+        <RefreshView Command="{Binding RefreshCommand}"
+                     IsRefreshing="{Binding IsRefreshing}">
+            <ScrollView>
+                <CollectionView ItemsLayout="VerticalGrid, 2"
+                            ItemsSource="{Binding }">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="80" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.RowSpan="2" 
+                               Source="{Binding ImageUrl}" 
+                               Aspect="AspectFill"
+                               HeightRequest="60" 
+                               WidthRequest="60"/>
+                                <Label Grid.Column="1" 
+                               Text="{Binding Name}" 
+                               FontAttributes="Bold"
+                               LineBreakMode="TailTruncation" />
+                                <Label Grid.Row="1"
+                               Grid.Column="1" 
+                               Text="{Binding Location}"
+                               LineBreakMode="TailTruncation"
+                               FontAttributes="Italic" 
+                               VerticalOptions="End" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </RefreshView>
+       
+    </StackLayout>
+
+</ContentPage>
