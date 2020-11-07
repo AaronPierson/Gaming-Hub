@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public abstract class ShellItemRendererBase
-	extends androidx.fragment.app.Fragment
+	extends android.support.v4.app.Fragment
 	implements
 		mono.android.IGCUserPeer
 {
@@ -21,14 +21,6 @@ public abstract class ShellItemRendererBase
 		super ();
 		if (getClass () == ShellItemRendererBase.class)
 			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ShellItemRendererBase, Xamarin.Forms.Platform.Android", "", this, new java.lang.Object[] {  });
-	}
-
-
-	public ShellItemRendererBase (int p0)
-	{
-		super (p0);
-		if (getClass () == ShellItemRendererBase.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ShellItemRendererBase, Xamarin.Forms.Platform.Android", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
 	}
 
 

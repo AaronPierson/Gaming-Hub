@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj": {}
+    "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj": {
+    "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj",
+        "projectUniqueName": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj",
         "projectName": "GamersHub.Android",
-        "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj",
+        "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj",
         "packagesPath": "C:\\Users\\rpgam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.Android\\obj\\",
+        "outputPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj": {
-                "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj"
+              "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj": {
+                "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj"
               }
             }
           }
@@ -50,14 +50,6 @@
               "target": "Package",
               "version": "[12.0.3, )"
             },
-            "Xamarin.AndroidX.Legacy.Support.V4": {
-              "target": "Package",
-              "version": "[1.0.0.5, )"
-            },
-            "Xamarin.AndroidX.Lifecycle.LiveData": {
-              "target": "Package",
-              "version": "[2.2.0.3, )"
-            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.5.3.2, )"
@@ -65,30 +57,23 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.8.0.1560, )"
-            },
-            "Xamarin.Google.Android.Material": {
-              "target": "Package",
-              "version": "[1.0.0.1, )"
-            },
-            "Xamarin.GooglePlayServices.Ads": {
-              "target": "Package",
-              "version": "[119.1.0, )"
             }
           }
         }
       }
     },
-    "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj": {
+    "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj",
+        "projectUniqueName": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj",
         "projectName": "GamersHub",
-        "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj",
+        "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj",
         "packagesPath": "C:\\Users\\rpgam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\obj\\",
+        "outputPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\rpgam\\AppData\\Roaming\\NuGet\\NuGet.Config",

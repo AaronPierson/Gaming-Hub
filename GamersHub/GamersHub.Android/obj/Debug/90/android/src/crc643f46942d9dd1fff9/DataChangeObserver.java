@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class DataChangeObserver
-	extends androidx.recyclerview.widget.RecyclerView.AdapterDataObserver
+	extends android.support.v7.widget.RecyclerView.AdapterDataObserver
 	implements
 		mono.android.IGCUserPeer
 {

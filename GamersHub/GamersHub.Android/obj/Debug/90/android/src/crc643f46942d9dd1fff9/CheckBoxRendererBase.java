@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class CheckBoxRendererBase
-	extends androidx.appcompat.widget.AppCompatCheckBox
+	extends android.support.v7.widget.AppCompatCheckBox
 	implements
 		mono.android.IGCUserPeer,
 		android.view.View.OnFocusChangeListener,

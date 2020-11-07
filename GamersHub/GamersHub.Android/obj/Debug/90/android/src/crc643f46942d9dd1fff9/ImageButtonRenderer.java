@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class ImageButtonRenderer
-	extends androidx.appcompat.widget.AppCompatImageButton
+	extends android.support.v7.widget.AppCompatImageButton
 	implements
 		mono.android.IGCUserPeer,
 		android.view.View.OnFocusChangeListener,

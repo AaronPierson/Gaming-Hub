@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj": {}
+    "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj": {
+    "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj",
+        "projectUniqueName": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj",
         "projectName": "GamersHub.UWP",
-        "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj",
+        "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj",
         "packagesPath": "C:\\Users\\rpgam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.UWP\\obj\\",
+        "outputPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.UWP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -33,8 +33,8 @@
         "frameworks": {
           "uap10.0.16299": {
             "projectReferences": {
-              "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj": {
-                "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj"
+              "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj": {
+                "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj"
               }
             }
           }
@@ -91,17 +91,18 @@
         }
       }
     },
-    "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj": {
+    "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj",
+        "projectUniqueName": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj",
         "projectName": "GamersHub",
-        "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj",
+        "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj",
         "packagesPath": "C:\\Users\\rpgam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\obj\\",
+        "outputPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\rpgam\\AppData\\Roaming\\NuGet\\NuGet.Config",

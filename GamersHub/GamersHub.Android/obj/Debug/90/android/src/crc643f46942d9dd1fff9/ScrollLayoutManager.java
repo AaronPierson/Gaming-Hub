@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class ScrollLayoutManager
-	extends androidx.recyclerview.widget.LinearLayoutManager
+	extends android.support.v7.widget.LinearLayoutManager
 	implements
 		mono.android.IGCUserPeer
 {

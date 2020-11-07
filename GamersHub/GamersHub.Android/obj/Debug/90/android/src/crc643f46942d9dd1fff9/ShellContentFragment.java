@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class ShellContentFragment
-	extends androidx.fragment.app.Fragment
+	extends android.support.v4.app.Fragment
 	implements
 		mono.android.IGCUserPeer,
 		android.view.animation.Animation.AnimationListener
@@ -27,14 +27,6 @@ public class ShellContentFragment
 		super ();
 		if (getClass () == ShellContentFragment.class)
 			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ShellContentFragment, Xamarin.Forms.Platform.Android", "", this, new java.lang.Object[] {  });
-	}
-
-
-	public ShellContentFragment (int p0)
-	{
-		super (p0);
-		if (getClass () == ShellContentFragment.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ShellContentFragment, Xamarin.Forms.Platform.Android", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
 	}
 
 

@@ -24,6 +24,7 @@ namespace GamersHub
         private async void ContentPage_Appearing(object sender, EventArgs e)
         {  
               Games = await RAWGViewModel.GetNewGamesAsync();
+            var a = Games[1].Platforms[0].Platform.Name;
             collectionViewList.ItemsSource = Games;
         }
     }

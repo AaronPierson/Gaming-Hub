@@ -14,53 +14,62 @@
 
         <Label Text="New and trending" FontSize="Title" BackgroundColor="Gray"
                Margin="0" Padding="20"></Label>
-        <SearchBar Placeholder="Hello" FontAttributes="Bold" 
+        <SearchBar Placeholder="Game Search" FontAttributes="Bold" 
                    BackgroundColor="Gray" Text="{Binding Name}" />
         
         <ads:AdControlView BackgroundColor="ForestGreen" Margin="0" HorizontalOptions="EndAndExpand"/>
-        
+
         <RefreshView IsEnabled="True" Command="{Binding GetGamesCommand}"
                      IsRefreshing="{Binding IsBusy, Mode=OneWay}">
             <ScrollView>
-                <CollectionView ItemsLayout="VerticalGrid, 2"
+                <CollectionView ItemsLayout="VerticalGrid, 4"
                             ItemsSource="{Binding Games}"
                                 SelectionMode="Single"
                                 Header="{Binding Display}"
-                                x:Name="collectionViewList">
+                                x:Name="collectionViewList"
+                                >
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid Padding="10">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="35" />
-                                    <RowDefinition Height="35" />
+                                    <RowDefinition Height="{OnIdiom Phone=50, Tablet=100, Desktop=120}" />
+                                    <RowDefinition Height="{OnIdiom Phone=35, Tablet=70, Desktop=120}" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="70" />
-                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="{OnIdiom Phone=35, Tablet=70, Desktop=180}" />
+                                    <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Image Grid.RowSpan="2" 
                                Source="{Binding BackgroundImage}" 
                                Aspect="AspectFill"
                                HeightRequest="60" 
                                WidthRequest="60"/>
-                                <Label Grid.Column="1" 
+                                <StackLayout Grid.Column="1">
+                                    <Label
                                Text="{Binding Name}" 
                                FontAttributes="Bold"
+                               LineBreakMode="TailTruncation"/>
+                                    <Label 
+                               Text="{Binding Platforms[0].Platform.Name}" 
+                               FontAttributes="Bold"
                                LineBreakMode="TailTruncation" />
-                                <Label Grid.Row="1"
+                                    <Label 
+                               Text="{Binding Genres[0].Name}" 
+                               FontAttributes="Bold"
+                               LineBreakMode="TailTruncation" />
+                                    <Label Grid.Row="1"
                                Grid.Column="1" 
                                Text="{Binding Rating}"
                                LineBreakMode="TailTruncation"
                                FontAttributes="Italic" 
                                VerticalOptions="End" />
+                                </StackLayout>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </ScrollView>
         </RefreshView>
-        <Button Command="{Binding LoadCommand}" Text="test load"/>
-        
 
     </StackLayout>
 

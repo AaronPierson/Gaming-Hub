@@ -159,7 +159,7 @@
         [JsonProperty("platforms", NullValueHandling = NullValueHandling.Ignore)]
         public List<PlatformElement> Platforms { get; set; }
 
-        [JsonProperty("parent_platforms", NullValueHandling = NullValueHandling.Ignore)]
+         [JsonProperty("parent_platforms", NullValueHandling = NullValueHandling.Ignore)]
         public List<ParentPlatform> ParentPlatforms { get; set; }
 
         [JsonProperty("genres", NullValueHandling = NullValueHandling.Ignore)]

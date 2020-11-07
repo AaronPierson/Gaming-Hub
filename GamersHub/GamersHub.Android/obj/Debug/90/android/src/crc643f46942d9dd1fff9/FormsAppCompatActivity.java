@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class FormsAppCompatActivity
-	extends androidx.appcompat.app.AppCompatActivity
+	extends android.support.v7.app.AppCompatActivity
 	implements
 		mono.android.IGCUserPeer
 {
@@ -32,14 +32,6 @@ public class FormsAppCompatActivity
 		super ();
 		if (getClass () == FormsAppCompatActivity.class)
 			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.FormsAppCompatActivity, Xamarin.Forms.Platform.Android", "", this, new java.lang.Object[] {  });
-	}
-
-
-	public FormsAppCompatActivity (int p0)
-	{
-		super (p0);
-		if (getClass () == FormsAppCompatActivity.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.FormsAppCompatActivity, Xamarin.Forms.Platform.Android", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
 	}
 
 

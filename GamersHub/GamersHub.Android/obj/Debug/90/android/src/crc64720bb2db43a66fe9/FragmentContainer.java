@@ -2,7 +2,7 @@ package crc64720bb2db43a66fe9;
 
 
 public class FragmentContainer
-	extends androidx.fragment.app.Fragment
+	extends android.support.v4.app.Fragment
 	implements
 		mono.android.IGCUserPeer
 {
@@ -25,14 +25,6 @@ public class FragmentContainer
 		super ();
 		if (getClass () == FragmentContainer.class)
 			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.AppCompat.FragmentContainer, Xamarin.Forms.Platform.Android", "", this, new java.lang.Object[] {  });
-	}
-
-
-	public FragmentContainer (int p0)
-	{
-		super (p0);
-		if (getClass () == FragmentContainer.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.AppCompat.FragmentContainer, Xamarin.Forms.Platform.Android", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
 	}
 
 

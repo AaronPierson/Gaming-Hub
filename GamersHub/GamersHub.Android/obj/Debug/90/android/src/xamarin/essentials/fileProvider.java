@@ -2,7 +2,7 @@ package xamarin.essentials;
 
 
 public class fileProvider
-	extends androidx.core.content.FileProvider
+	extends android.support.v4.content.FileProvider
 	implements
 		mono.android.IGCUserPeer
 {

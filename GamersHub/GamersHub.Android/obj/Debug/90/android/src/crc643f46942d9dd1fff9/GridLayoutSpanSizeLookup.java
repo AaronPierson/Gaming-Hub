@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class GridLayoutSpanSizeLookup
-	extends androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup
+	extends android.support.v7.widget.GridLayoutManager.SpanSizeLookup
 	implements
 		mono.android.IGCUserPeer
 {

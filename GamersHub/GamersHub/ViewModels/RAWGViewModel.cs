@@ -56,6 +56,7 @@ namespace GamersHub.ViewModels
             var data = NewReleasedGames.FromJson(response);
             // var cards = PokeCardModel.FromJson(response);
             datalist = data.Results.ToList<Result>();
+           
             //_allcardslst = cards.Cards.ToList<Card>();
             // AllCards = cards.Cards.ToList<Card>();
           ObservableCollection<Result> games = new ObservableCollection<Result>(datalist);

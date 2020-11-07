@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class ShellToolbarTracker_FlyoutIconDrawerDrawable
-	extends androidx.appcompat.graphics.drawable.DrawerArrowDrawable
+	extends android.support.v7.graphics.drawable.DrawerArrowDrawable
 	implements
 		mono.android.IGCUserPeer
 {

@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public abstract class ItemsViewRenderer_3
-	extends androidx.recyclerview.widget.RecyclerView
+	extends android.support.v7.widget.RecyclerView
 	implements
 		mono.android.IGCUserPeer
 {

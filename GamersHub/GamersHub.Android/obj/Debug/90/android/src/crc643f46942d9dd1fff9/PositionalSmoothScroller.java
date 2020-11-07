@@ -2,7 +2,7 @@ package crc643f46942d9dd1fff9;
 
 
 public class PositionalSmoothScroller
-	extends androidx.recyclerview.widget.LinearSmoothScroller
+	extends android.support.v7.widget.LinearSmoothScroller
 	implements
 		mono.android.IGCUserPeer
 {

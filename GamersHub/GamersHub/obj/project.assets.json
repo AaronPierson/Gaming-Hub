@@ -972,19 +972,21 @@
   },
   "packageFolders": {
     "C:\\Users\\rpgam\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj",
+      "projectUniqueName": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj",
       "projectName": "GamersHub",
-      "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj",
+      "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj",
       "packagesPath": "C:\\Users\\rpgam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\obj\\",
+      "outputPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\rpgam\\AppData\\Roaming\\NuGet\\NuGet.Config",
