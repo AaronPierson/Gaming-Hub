@@ -1,22 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ads="clr-namespace:GamersHub.Controls"
+             xmlns:viewModels="clr-namespace:GamersHub.ViewModels" xmlns:viewModels1="clr-namespace:GamersHub"
              x:Class="GamersHub.MainPage"
              Title="New and trending"
              Appearing="ContentPage_Appearing">
-            
+             
+    <ContentPage.BindingContext>
+        <viewModels:RAWGViewModel/>
+    </ContentPage.BindingContext>
     <StackLayout>
 
         <Label Text="New and trending" FontSize="Title" BackgroundColor="Gray"
                Margin="0" Padding="20"></Label>
         <SearchBar Placeholder="Hello" FontAttributes="Bold" 
-                   BackgroundColor="Gray"/>
-
-        <RefreshView Command="{Binding RefreshCommand}"
-                     IsRefreshing="{Binding IsRefreshing}">
+                   BackgroundColor="Gray" Text="{Binding Name}" />
+        
+        <ads:AdControlView BackgroundColor="ForestGreen" Margin="0" HorizontalOptions="EndAndExpand"/>
+        
+        <RefreshView IsEnabled="True" Command="{Binding GetGamesCommand}"
+                     IsRefreshing="{Binding IsBusy, Mode=OneWay}">
             <ScrollView>
                 <CollectionView ItemsLayout="VerticalGrid, 2"
-                            ItemsSource="{Binding }">
+                            ItemsSource="{Binding Games}"
+                                SelectionMode="Single"
+                                Header="{Binding Display}"
+                                x:Name="collectionViewList">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid Padding="10">
@@ -29,7 +39,7 @@
                                     <ColumnDefinition Width="80" />
                                 </Grid.ColumnDefinitions>
                                 <Image Grid.RowSpan="2" 
-                               Source="{Binding ImageUrl}" 
+                               Source="{Binding BackgroundImage}" 
                                Aspect="AspectFill"
                                HeightRequest="60" 
                                WidthRequest="60"/>
@@ -39,7 +49,7 @@
                                LineBreakMode="TailTruncation" />
                                 <Label Grid.Row="1"
                                Grid.Column="1" 
-                               Text="{Binding Location}"
+                               Text="{Binding Rating}"
                                LineBreakMode="TailTruncation"
                                FontAttributes="Italic" 
                                VerticalOptions="End" />
@@ -49,7 +59,9 @@
                 </CollectionView>
             </ScrollView>
         </RefreshView>
-       
+        <Button Command="{Binding LoadCommand}" Text="test load"/>
+        
+
     </StackLayout>
 
 </ContentPage>

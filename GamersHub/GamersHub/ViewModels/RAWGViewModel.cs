@@ -9,26 +9,48 @@ using RAWGQT;
 using System.Linq;
 using Xamarin.Forms;
 using System.ComponentModel;
+using System.Windows.Input;
 
 namespace GamersHub.ViewModels
 {
 
-    class RAWGViewModel : INotifyPropertyChanged
+    public class RAWGViewModel : INotifyPropertyChanged
     {
-       
+
         const string NEWGAMESURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=10&ordering=released";
-       // public ObservableCollection<Result> Games = new ObservableCollection<Result>();
         public static List<Result> datalist = new List<Result>();
         static HttpClient htp = new HttpClient();
 
         public event PropertyChangedEventHandler PropertyChanged;
+       
+        public ICommand LoadCommand { get; }
+        //LoadCommand = new Command(GetNewGamesAsync);
 
-        void OnPropertyChanged(ObservableCollection<Result> datalist)
+
+        string name = string.Empty;
+        string urlImg = string.Empty;
+        public string Name
         {
-            //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(datalist.));
+            get => name;
+            set
+            {
+                if (name == value)
+                    return;
+
+                name = value;
+                OnPropertyChanged(nameof(name));
+                OnPropertyChanged(nameof(Display));
+            }
         }
 
-        public static async Task<ObservableCollection<Result>> GetNewGamestAsync()
+        public string Display => $"Searched For: {Name}";
+
+        void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+        public static async Task<ObservableCollection<Result>> GetNewGamesAsync() 
         { 
             string response = await htp.GetStringAsync(NEWGAMESURL);
             var data = NewReleasedGames.FromJson(response);
@@ -36,8 +58,8 @@ namespace GamersHub.ViewModels
             datalist = data.Results.ToList<Result>();
             //_allcardslst = cards.Cards.ToList<Card>();
             // AllCards = cards.Cards.ToList<Card>();
-           ObservableCollection<Result> games = new ObservableCollection<Result>(datalist);
-            
+          ObservableCollection<Result> games = new ObservableCollection<Result>(datalist);
+
             return games;
         }
     }
