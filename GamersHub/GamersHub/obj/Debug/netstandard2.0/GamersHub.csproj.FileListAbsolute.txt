@@ -26,3 +26,5 @@ C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\obj\Debug\netstandard2.0\Xam
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.dll
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\obj\Debug\netstandard2.0\ref\GamersHub.dll
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.pdb
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\Views\GameDetails.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\Views\MainMenu.xaml.g.cs

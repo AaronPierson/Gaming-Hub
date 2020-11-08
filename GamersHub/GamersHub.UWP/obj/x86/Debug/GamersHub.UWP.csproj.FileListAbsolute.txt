@@ -127,3 +127,4 @@ C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub.UWP\obj\x86\Debug\ProjectArc
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160931180000000.json
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885490160000000.json
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885526160000000.json
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885526160000000.json

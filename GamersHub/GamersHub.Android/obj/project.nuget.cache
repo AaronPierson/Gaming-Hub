@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U/C4O5z1UGuni3P+VCKjFTIOX2GkaLKE4SgdCFZ3IWBF3yeRSmoXGw5PjAL34vzghvC7AkAWPHtk6uOG1H/W8A==",
+  "dgSpecHash": "ZqhBWPpEbKH6F6ans3m8zQId9e7d+GkMbqDa8qTOhG/WXEPGxpwP32UP4CcQKCzzQjMuEslc0zJJPzFHDg9XVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj",
+  "projectFilePath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rpgam\\.nuget\\packages\\microsoft.netcore.universalwindowsplatform\\6.2.10\\microsoft.netcore.universalwindowsplatform.6.2.10.nupkg.sha512",
     "C:\\Users\\rpgam\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",

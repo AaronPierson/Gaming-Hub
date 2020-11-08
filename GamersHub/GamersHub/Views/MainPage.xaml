@@ -15,7 +15,7 @@
         <Label Text="New and trending" FontSize="Title" BackgroundColor="Gray"
                Margin="0" Padding="20"></Label>
         <SearchBar Placeholder="Game Search" FontAttributes="Bold" 
-                   BackgroundColor="Gray" Text="{Binding Name}" />
+                   BackgroundColor="Gray" Text="{Binding Name}"/>
         
         <ads:AdControlView BackgroundColor="ForestGreen" Margin="0" HorizontalOptions="EndAndExpand"/>
 

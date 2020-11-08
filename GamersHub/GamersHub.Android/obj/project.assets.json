@@ -2281,11 +2281,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj",
+      "projectUniqueName": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj",
       "projectName": "GamersHub.Android",
-      "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj",
+      "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.Android\\GamersHub.Android.csproj",
       "packagesPath": "C:\\Users\\rpgam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.Android\\obj\\",
+      "outputPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2306,8 +2306,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj": {
-              "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj"
+            "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj": {
+              "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj"
             }
           }
         }

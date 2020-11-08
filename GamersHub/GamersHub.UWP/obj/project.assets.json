@@ -4809,7 +4809,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -9293,11 +9293,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj",
       "projectName": "GamersHub.UWP",
-      "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj",
+      "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.UWP\\GamersHub.UWP.csproj",
       "packagesPath": "C:\\Users\\rpgam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub.UWP\\obj\\",
+      "outputPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -9319,8 +9319,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj": {
-              "projectPath": "C:\\Users\\rpgam\\Documents\\GitHub\\GamersHub\\GamersHub\\GamersHub.csproj"
+            "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj": {
+              "projectPath": "C:\\Users\\rpgam\\Documents\\Visual Studio Projects\\GamersHub\\GamersHub\\GamersHub.csproj"
             }
           }
         }

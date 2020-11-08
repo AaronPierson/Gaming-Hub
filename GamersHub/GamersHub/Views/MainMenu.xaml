@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GamersHub.Views.MainMenu">
+    <ContentPage.Content>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="150"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <CollectionView>
+               
+            </CollectionView>
+            <Button BackgroundColor="Green" Grid.Column="0" Grid.Row="0"
+                    Text="Search"                 />
+            <Button BackgroundColor="Green" Grid.Column="0" Grid.Row="1"
+                    Text="Search"/>
+            <Button BackgroundColor="Green" Grid.Column="1" Grid.Row="0"
+                    Text="Search" WidthRequest="50" HeightRequest="50"/>
+            <Button BackgroundColor="Green" Grid.Column="1" Grid.Row="1"
+                    Text="Search" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
