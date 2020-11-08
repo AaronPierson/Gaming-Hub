@@ -17,7 +17,7 @@ namespace GamersHub.ViewModels
     public class RAWGViewModel : INotifyPropertyChanged
     {
 
-        const string NEWGAMESURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=10&ordering=released";
+        const string NEWGAMESURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=50&ordering=released";
         public static List<Result> datalist = new List<Result>();
         static HttpClient htp = new HttpClient();
 
@@ -56,9 +56,6 @@ namespace GamersHub.ViewModels
             var data = NewReleasedGames.FromJson(response);
             // var cards = PokeCardModel.FromJson(response);
             datalist = data.Results.ToList<Result>();
-           
-            //_allcardslst = cards.Cards.ToList<Card>();
-            // AllCards = cards.Cards.ToList<Card>();
           ObservableCollection<Result> games = new ObservableCollection<Result>(datalist);
 
             return games;
