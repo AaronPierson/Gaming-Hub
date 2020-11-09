@@ -15,14 +15,14 @@
         <Label Text="New and trending" FontSize="Title" BackgroundColor="Gray"
                Margin="0" Padding="20"></Label>
         <SearchBar Placeholder="Game Search" FontAttributes="Bold" 
-                   BackgroundColor="Gray" Text="{Binding Name}"/>
+                   BackgroundColor="Gray" Text="{Binding Name}" TextChanged="SearchBar_TextChanged"/>
         
         <ads:AdControlView BackgroundColor="ForestGreen" Margin="0" HorizontalOptions="EndAndExpand"/>
 
         <RefreshView IsEnabled="True" Command="{Binding GetGamesCommand}"
                      IsRefreshing="{Binding IsBusy, Mode=OneWay}">
             <ScrollView>
-                <CollectionView ItemsLayout="VerticalGrid, 4"
+                <CollectionView ItemsLayout="VerticalGrid"
                             ItemsSource="{Binding Games}"
                                 SelectionMode="Single"
                                 Header="{Binding Display}"
@@ -33,10 +33,10 @@
                             <Grid Padding="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="{OnIdiom Phone=50, Tablet=100, Desktop=120}" />
-                                    <RowDefinition Height="{OnIdiom Phone=35, Tablet=70, Desktop=120}" />
+                                    <RowDefinition Height="{OnIdiom Phone=50, Tablet=70, Desktop=120}" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="{OnIdiom Phone=35, Tablet=70, Desktop=180}" />
+                                    <ColumnDefinition Width="{OnIdiom Phone=80, Tablet=100, Desktop=180}" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Image Grid.RowSpan="2" 
@@ -49,20 +49,28 @@
                                Text="{Binding Name}" 
                                FontAttributes="Bold"
                                LineBreakMode="TailTruncation"/>
-                                    <Label 
-                               Text="{Binding Platforms[0].Platform.Name}" 
-                               FontAttributes="Bold"
-                               LineBreakMode="TailTruncation" />
-                                    <Label 
-                               Text="{Binding Genres[0].Name}" 
-                               FontAttributes="Bold"
-                               LineBreakMode="TailTruncation" />
-                                    <Label Grid.Row="1"
-                               Grid.Column="1" 
-                               Text="{Binding Rating}"
-                               LineBreakMode="TailTruncation"
-                               FontAttributes="Italic" 
-                               VerticalOptions="End" />
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Genres[0].Name}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Genres[1].Name}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Genres[2].Name}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Genres[3].Name}" FontAttributes="Bold"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Platforms[0].Platform.Name}" 
+                                             FontAttributes="Bold"
+                                            LineBreakMode="TailTruncation" />
+                                        <Label Text="{Binding Platforms[1].Platform.Name}" 
+                                             FontAttributes="Bold"
+                                             LineBreakMode="TailTruncation" />
+                                        <Label Text="{Binding Platforms[2].Platform.Name}" 
+                                                FontAttributes="Bold"
+                                                LineBreakMode="TailTruncation" />
+                                        <Label Text="{Binding Platforms[3].Platform.Name}" 
+                                                FontAttributes="Bold"
+                                                LineBreakMode="TailTruncation" />
+                                    </StackLayout>
                                 </StackLayout>
                             </Grid>
                         </DataTemplate>

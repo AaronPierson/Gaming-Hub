@@ -24,21 +24,21 @@ namespace GamersHub
         public ObservableCollection<Result> Games { get; set; }
         private async void ContentPage_Appearing(object sender, EventArgs e)
         {  
-              Games = await model.GetNewGamesAsync("");
+              Games = await model.GetNewGamesAsync();
             var a = Games[1].Platforms[0].Platform.Name;
             collectionViewList.ItemsSource = Games;
         }
 
+        private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            collectionViewList.ItemsSource = Games;
+            //var a = Games[1].ParentPlatforms[0].Platform.Name;
+            collectionViewList.ItemsSource = await model.SearchGamesAsync(e.NewTextValue.ToString());
+            // await Task.Delay(2000);
+        }
 
-       
-               // await Task.Delay(2000);
-              //  Games = await model.GetNewGamesAsync(e.NewTextValue.ToString());
-               // collectionViewList.ItemsSource = Games;
-           
+        //  Games = await model.GetNewGamesAsync();
+        //collectionViewList.ItemsSource = Games;
 
-       
-          //  Games = await model.GetNewGamesAsync();
-            //collectionViewList.ItemsSource = Games;
-        
     }
 }
