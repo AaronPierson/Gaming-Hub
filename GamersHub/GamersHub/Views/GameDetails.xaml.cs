@@ -12,9 +12,21 @@ namespace GamersHub.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GameDetails : ContentPage
     {
-        public GameDetails()
+        RAWGQTSearch.Result GD;
+        //private object gd;
+
+        public GameDetails(object gd)
         {
             InitializeComponent();
+            
+            GD = (RAWGQTSearch.Result)gd;
+            
+        }
+
+        private void ContentPage_Appearing(object sender, EventArgs e)
+        {
+           // collectionViewList.ItemsSource = GD;
+            lbltest.Text = GD.Name;
         }
     }
 }

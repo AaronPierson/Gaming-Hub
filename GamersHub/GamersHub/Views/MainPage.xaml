@@ -14,19 +14,19 @@
 
         <Label Text="New and trending" FontSize="Title" BackgroundColor="Gray"
                Margin="0" Padding="20"></Label>
-        <SearchBar Placeholder="Game Search" FontAttributes="Bold" 
+        <SearchBar Placeholder="Game Search" FontAttributes="Bold" Margin="0"
                    BackgroundColor="Gray" Text="{Binding Name}" TextChanged="SearchBar_TextChanged"/>
         
         <ads:AdControlView BackgroundColor="ForestGreen" Margin="0" HorizontalOptions="EndAndExpand"/>
 
-        <RefreshView IsEnabled="True" Command="{Binding GetGamesCommand}"
-                     IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+
             <ScrollView>
                 <CollectionView ItemsLayout="VerticalGrid"
                             ItemsSource="{Binding Games}"
                                 SelectionMode="Single"
                                 Header="{Binding Display}"
                                 x:Name="collectionViewList"
+                               SelectionChanged="collectionViewList_SelectionChanged"
                                 >
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
@@ -77,8 +77,16 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </ScrollView>
-        </RefreshView>
 
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                     BackgroundColor="Black" HeightRequest="50">
+            <Button Text="Pervious" HorizontalOptions="StartAndExpand" WidthRequest="100"/>
+            <Label FontSize="Header" 
+                   TextColor="Wheat" x:Name="lblCount"/>
+            <Button Text="Next" HorizontalOptions="EndAndExpand"
+                    x:Name="btnNextPage" Clicked="btnNextPage_Clicked" WidthRequest="100"/>
+        </StackLayout>
+      
     </StackLayout>
 
 </ContentPage>

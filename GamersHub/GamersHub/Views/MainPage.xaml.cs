@@ -1,4 +1,5 @@
 ﻿using GamersHub.ViewModels;
+using GamersHub.Views;
 using RAWGQT;
 using System;
 using System.Collections.Generic;
@@ -31,10 +32,27 @@ namespace GamersHub
 
         private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            collectionViewList.ItemsSource = Games;
+            
+           // collectionViewList.ItemsSource = Games;
             //var a = Games[1].ParentPlatforms[0].Platform.Name;
             collectionViewList.ItemsSource = await model.SearchGamesAsync(e.NewTextValue.ToString());
+            lblCount.Text = RAWGViewModel.PageCount;
             // await Task.Delay(2000);
+        }
+
+        private async void btnNextPage_Clicked(object sender, EventArgs e)
+        {
+            collectionViewList.ItemsSource = await model.SearchNextAsync();
+        }
+
+        private async void collectionViewList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //  var Gamedetails = new GameDetails();
+            var gd = e.CurrentSelection[0];
+            await Navigation.PushAsync(new GameDetails(gd));
+           
+           // Application.Current.MainPage.Navigation.PushAsync(GameDetails);
+
         }
 
         //  Games = await model.GetNewGamesAsync();

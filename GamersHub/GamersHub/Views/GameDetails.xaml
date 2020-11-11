@@ -1,13 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GamersHub.Views.GameDetails">
+             x:Class="GamersHub.Views.GameDetails"
+             Appearing="ContentPage_Appearing">
     <ContentPage.Content>
         <StackLayout>
             <Image Source="{Binding BackgroundImage}"
                    BackgroundColor="Black" WidthRequest="250"/>
-            
-   
+                
+            <Label Text="Page Detials" FontSize="Large" x:Name="lbltest"/>
+            <CollectionView ItemsLayout="VerticalGrid"
+                                Header="{Binding Display}"
+                                x:Name="collectionViewList"                           
+                                >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="{OnIdiom Phone=50, Tablet=100, Desktop=120}" />
+                                <RowDefinition Height="{OnIdiom Phone=50, Tablet=70, Desktop=120}" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="{OnIdiom Phone=80, Tablet=100, Desktop=180}" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="2" 
+                               Source="{Binding BackgroundImage}" 
+                               Aspect="AspectFill"
+                               HeightRequest="60" 
+                               WidthRequest="60"/>
+                            <StackLayout Grid.Column="1">
+                                <Label
+                               Text="{Binding Name}" 
+                               FontAttributes="Bold"
+                               LineBreakMode="TailTruncation"/>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Genres[0].Name}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Genres[1].Name}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Genres[2].Name}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Genres[3].Name}" FontAttributes="Bold"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Platforms[0].Platform.Name}" 
+                                             FontAttributes="Bold"
+                                            LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding Platforms[1].Platform.Name}" 
+                                             FontAttributes="Bold"
+                                             LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding Platforms[2].Platform.Name}" 
+                                                FontAttributes="Bold"
+                                                LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding Platforms[3].Platform.Name}" 
+                                                FontAttributes="Bold"
+                                                LineBreakMode="TailTruncation" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

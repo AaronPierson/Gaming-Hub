@@ -11,6 +11,7 @@ using Xamarin.Forms;
 using System.ComponentModel;
 using System.Windows.Input;
 using RAWGQTSearch;
+using Xamarin.Forms.Internals;
 
 namespace GamersHub.ViewModels
 {
@@ -18,14 +19,21 @@ namespace GamersHub.ViewModels
     public class RAWGViewModel : INotifyPropertyChanged
     {
 
-        const string NEWGAMESURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=20&ordering=released&search=";
+        const string NEWGAMESURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=20&ordering=released";
         string SearchURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=10&search=";
         public static List<RAWGQT.Result> datalist = new List<RAWGQT.Result>();
         static HttpClient htp = new HttpClient();
+        ObservableCollection<RAWGQTSearch.Result> games;
+        // page resutsl
+        static string NextSearchResult;
+        static string PreviousSearchResult;
+        public static string PageCount;
 
         public event PropertyChangedEventHandler PropertyChanged;
        
         public ICommand LoadCommand { get; }
+        public ICommand GetNext { get; }
+        public ICommand GetPrevious { get; }
         //LoadCommand = new Command(GetNewGamesAsync);
 
         string name = string.Empty;
@@ -50,10 +58,10 @@ namespace GamersHub.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-
+        //search for the newest games
         public async Task<ObservableCollection<RAWGQT.Result>> GetNewGamesAsync() 
         { 
-            string response = await htp.GetStringAsync(NEWGAMESURL + name);
+            string response = await htp.GetStringAsync(NEWGAMESURL);
             var data = NewReleasedGames.FromJson(response);
             // var cards = PokeCardModel.FromJson(response);
             //datalist = data.Results.ToList<RAWGQT.Result>();
@@ -62,15 +70,39 @@ namespace GamersHub.ViewModels
 
             return games;
         }
+        //Search for user game
 
         public async Task<ObservableCollection<RAWGQTSearch.Result>> SearchGamesAsync(string name)
         {
             string response = await htp.GetStringAsync(SearchURL + name);
             var data = UserSearchGame.FromJson(response);
-           // datalist = data.Results.ToList<Result>();
-            ObservableCollection<RAWGQTSearch.Result> games = new ObservableCollection<RAWGQTSearch.Result>(data.Results.ToList());
+            PageCount = data.Count.ToString();
+                //Check for nulls
+                if (data.Next.ToString() == null)
+                {
 
+                }
+                else
+                {
+                    NextSearchResult = data.Next.ToString();
+                }
+
+
+            // datalist = data.Results.ToList<Result>();
+            games = new ObservableCollection<RAWGQTSearch.Result>(data.Results.ToList());
             return games;
         }
+        //Load Next reasults
+        public async Task<ObservableCollection<RAWGQTSearch.Result>> SearchNextAsync()
+        {
+            
+            string response = await htp.GetStringAsync(NextSearchResult);
+            var data = UserSearchGame.FromJson(response);
+            // datalist = data.Results.ToList<Result>();
+            games = new ObservableCollection<RAWGQTSearch.Result>(data.Results.ToList());
+            return games;
+        }
+
+
     }
 }
