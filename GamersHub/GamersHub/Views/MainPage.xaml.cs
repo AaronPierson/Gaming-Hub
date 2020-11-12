@@ -27,6 +27,8 @@ namespace GamersHub
         {  
               Games = await model.GetNewGamesAsync();
             var a = Games[1].Platforms[0].Platform.Name;
+          //  Games[0].BackgroundImage
+           // Games[0].ShortScreenshots[0].Image.
             collectionViewList.ItemsSource = Games;
         }
 
@@ -35,8 +37,8 @@ namespace GamersHub
             
            // collectionViewList.ItemsSource = Games;
             //var a = Games[1].ParentPlatforms[0].Platform.Name;
-            collectionViewList.ItemsSource = await model.SearchGamesAsync(e.NewTextValue.ToString());
-            lblCount.Text = RAWGViewModel.PageCount;
+           // collectionViewList.ItemsSource = await model.SearchGamesAsync("pikmin");
+            //lblCount.Text = RAWGViewModel.PageCount;
             // await Task.Delay(2000);
         }
 

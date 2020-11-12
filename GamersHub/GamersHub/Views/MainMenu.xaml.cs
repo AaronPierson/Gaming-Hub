@@ -16,5 +16,13 @@ namespace GamersHub.Views
         {
             InitializeComponent();
         }
+
+        private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch(e.CurrentSelection.ToString())
+            {
+
+            }
+        }
     }
 }

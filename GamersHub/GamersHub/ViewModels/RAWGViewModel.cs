@@ -18,13 +18,15 @@ namespace GamersHub.ViewModels
 
     public class RAWGViewModel : INotifyPropertyChanged
     {
-
+        //base url
+        string AllGamesURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=20";
         const string NEWGAMESURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=20&ordering=released";
         string SearchURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=10&search=";
+        //List for collecting results
         public static List<RAWGQT.Result> datalist = new List<RAWGQT.Result>();
         static HttpClient htp = new HttpClient();
         ObservableCollection<RAWGQTSearch.Result> games;
-        // page resutsl
+        // page resuts l
         static string NextSearchResult;
         static string PreviousSearchResult;
         public static string PageCount;
@@ -61,7 +63,7 @@ namespace GamersHub.ViewModels
         //search for the newest games
         public async Task<ObservableCollection<RAWGQT.Result>> GetNewGamesAsync() 
         { 
-            string response = await htp.GetStringAsync(NEWGAMESURL);
+            string response = await htp.GetStringAsync(AllGamesURL);
             var data = NewReleasedGames.FromJson(response);
             // var cards = PokeCardModel.FromJson(response);
             //datalist = data.Results.ToList<RAWGQT.Result>();
