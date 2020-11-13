@@ -10,14 +10,17 @@
     <ContentPage.BindingContext>
         <viewModels:RAWGViewModel/>
     </ContentPage.BindingContext>
+
     <StackLayout>
-
-      
-        <SearchBar Placeholder="Game Search" FontAttributes="Bold" Margin="0"
-                   BackgroundColor="Gray" Text="{Binding Name}" TextChanged="SearchBar_TextChanged"/>
-        
-        <ads:AdControlView BackgroundColor="ForestGreen" Margin="0" HorizontalOptions="EndAndExpand"/>
-
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <StackLayout Grid.Row="0">
+            <SearchBar Placeholder="Game Search" FontAttributes="Bold" Margin="0" 
+                    Text="{Binding Name}" TextChanged="SearchBar_TextChanged" />
 
             <ScrollView>
                 <CollectionView ItemsLayout="VerticalGrid"
@@ -77,15 +80,20 @@
                 </CollectionView>
             </ScrollView>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
-                     BackgroundColor="Black" HeightRequest="50">
-            <Button Text="Pervious" HorizontalOptions="StartAndExpand" WidthRequest="100"/>
-            <Label FontSize="Header" 
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                      HeightRequest="50">
+                <Button Text="Pervious" HorizontalOptions="StartAndExpand" WidthRequest="100"/>
+                <Label FontSize="Header" 
                    TextColor="Wheat" x:Name="lblCount"/>
-            <Button Text="Next" HorizontalOptions="EndAndExpand"
+                <Button Text="Next" HorizontalOptions="EndAndExpand"
                     x:Name="btnNextPage" Clicked="btnNextPage_Clicked" WidthRequest="100"/>
+            </StackLayout>
         </StackLayout>
       
+        <StackLayout HorizontalOptions="EndAndExpand">
+            <ads:AdControlView BackgroundColor="ForestGreen" 
+                        Grid.Row="1" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

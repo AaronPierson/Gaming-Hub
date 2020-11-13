@@ -4,8 +4,16 @@ using System.Text;
 
 namespace GamersHub.Controls
 {
-    class AdControlView : Xamarin.Forms.View
+  public  class AdControlView : Xamarin.Forms.View
     {
 
+      //  public enum Sizes { Standardbanner, LargeBanner, MediumRectangle, FullBanner, Leaderboard, SmartBannerPortrait }
+      //  public Sizes Size { get; set; }
+        public AdControlView()
+        {
+            //this.BackgroundColor = Color.Accent;
+        }
+
+       
     }
 }

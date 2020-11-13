@@ -9,7 +9,7 @@
             <StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Image x:Name="imgGame" Margin="10" Grid.Column="0"
-                       WidthRequest="{OnIdiom Phone=200, Tablet=400, Desktop=800}" HeightRequest="{OnIdiom 200}"/>
+                       WidthRequest="{OnIdiom Phone=200, Tablet=400, Desktop=800}"/>
                     <StackLayout Orientation="Vertical" Grid.Column="2" Margin="0,25,0,0">
                         <Label x:Name="lblTitle" FontSize="{OnIdiom Phone=15}"/>
                         <Label x:Name="lblRelease"/>
@@ -29,6 +29,7 @@
                                 <DataTemplate>
                                     <StackLayout>
                                         <Label Text="{Binding Platform.Name}" Margin="10"/>
+                                    <Label Text="{Binding PlatformPlatform.Name}" Margin="10"/>
 
                                     </StackLayout>
                                 </DataTemplate>
@@ -37,7 +38,7 @@
                 </StackLayout>
                     <StackLayout>
 
-                    <Label Text="Stores:" Margin="10,0,0,0"  FontSize="Title"/>
+                    <Label Text="Stores" Margin="10,0,0,0"  FontSize="Title"/>
                     <CollectionView x:Name="lstStores" HeightRequest="50"
                                  Margin="0" ItemsLayout="HorizontalGrid">
                             <CollectionView.ItemTemplate>
@@ -71,12 +72,12 @@
                     </CollectionView>
                 -->
                 <Label Text="Screen Shots:" Margin="10,0,0,0"  FontSize="Title"/>
-                    <CollectionView x:Name="lstShortScreenshots" SelectionMode="Single"
+                    <CollectionView x:Name="lstShortScreenshots" SelectionMode="Single" 
                      HeightRequest="150"  ItemsLayout="HorizontalGrid" Margin="0">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <StackLayout Orientation="Horizontal">
-                                    <Image Source="{Binding Image}" Margin="10"
+                                    <Image Source="{Binding Image}" Margin="10" BackgroundColor="Black"
                                    HeightRequest="{OnIdiom Phone=200, Tablet=400, Desktop=600}" WidthRequest="200"/>
                                 </StackLayout>
                             </DataTemplate>

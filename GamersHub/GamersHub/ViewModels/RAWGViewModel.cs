@@ -36,7 +36,11 @@ namespace GamersHub.ViewModels
         public ICommand LoadCommand { get; }
         public ICommand GetNext { get; }
         public ICommand GetPrevious { get; }
-        //LoadCommand = new Command(GetNewGamesAsync);
+        public RAWGViewModel()
+        {
+         //   LoadCommand = new Command<ObservableCollection<RAWGQTSearch.Result>>(GetAllGamesAsync);
+        }
+       
 
         string name = string.Empty;
         string urlImg = string.Empty;
@@ -61,19 +65,17 @@ namespace GamersHub.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
         //search for the newest games
-        public async Task<ObservableCollection<RAWGQT.Result>> GetNewGamesAsync() 
+        public async Task<ObservableCollection<RAWGQT.Result>> GetAllGamesAsync() 
         { 
             string response = await htp.GetStringAsync(AllGamesURL);
             var data = NewReleasedGames.FromJson(response);
-            // var cards = PokeCardModel.FromJson(response);
             //datalist = data.Results.ToList<RAWGQT.Result>();
             ObservableCollection<RAWGQT.Result> games =
                   new ObservableCollection<RAWGQT.Result>(data.Results.ToList());
-
             return games;
         }
-        //Search for user game
 
+        //Search for user game
         public async Task<ObservableCollection<RAWGQTSearch.Result>> SearchGamesAsync(string name)
         {
             string response = await htp.GetStringAsync(SearchURL + name);
@@ -94,10 +96,10 @@ namespace GamersHub.ViewModels
             games = new ObservableCollection<RAWGQTSearch.Result>(data.Results.ToList());
             return games;
         }
+
         //Load Next reasults
         public async Task<ObservableCollection<RAWGQTSearch.Result>> SearchNextAsync()
-        {
-            
+        {  
             string response = await htp.GetStringAsync(NextSearchResult);
             var data = UserSearchGame.FromJson(response);
             // datalist = data.Results.ToList<Result>();

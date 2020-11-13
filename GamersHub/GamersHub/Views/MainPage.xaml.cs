@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace GamersHub
 {
     public partial class MainPage : ContentPage
@@ -24,22 +25,40 @@ namespace GamersHub
         RAWGViewModel model = new RAWGViewModel();
         public ObservableCollection<Result> Games { get; set; }
         private async void ContentPage_Appearing(object sender, EventArgs e)
-        {  
-              Games = await model.GetNewGamesAsync();
-            var a = Games[1].Platforms[0].Platform.Name;
+        {
+
+            try
+            {
+                Games = await model.GetAllGamesAsync();
+                var a = Games[1].Platforms[0].Platform.Name;
+                collectionViewList.ItemsSource = Games;
+            }catch(Exception ex)
+            {
+               
+            }
+             
           //  Games[0].BackgroundImage
            // Games[0].ShortScreenshots[0].Image.
-            collectionViewList.ItemsSource = Games;
+          
         }
 
         private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
-           // collectionViewList.ItemsSource = Games;
-            //var a = Games[1].ParentPlatforms[0].Platform.Name;
-           // collectionViewList.ItemsSource = await model.SearchGamesAsync("pikmin");
-            //lblCount.Text = RAWGViewModel.PageCount;
-            // await Task.Delay(2000);
+            try
+            {
+                
+                
+                //collectionViewList.ItemsSource = Games;
+                //var a = Games[1].ParentPlatforms[0].Platform.Name;
+                collectionViewList.ItemsSource = await model.SearchGamesAsync(e.NewTextValue);
+                //lblCount.Text = RAWGViewModel.PageCount;
+                // await Task.Delay(2000);
+            }
+            catch (Exception ex)
+            {
+
+            }
+           
         }
 
         private async void btnNextPage_Clicked(object sender, EventArgs e)
@@ -57,8 +76,10 @@ namespace GamersHub
 
         }
 
-        //  Games = await model.GetNewGamesAsync();
+        //  Games = await model.GetAllGamesAsync();
         //collectionViewList.ItemsSource = Games;
 
     }
+
+ 
 }

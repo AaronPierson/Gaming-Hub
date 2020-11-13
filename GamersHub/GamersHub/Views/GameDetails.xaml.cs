@@ -40,10 +40,23 @@ namespace GamersHub.Views
             if(usingSearchType == true)
             {
                 lblTitle.Text = SHGD.Name;
+                lblPlaytime.Text = "Estimate completion time: " + SHGD.Playtime.ToString();
                 imgGame.Source = SHGD.BackgroundImage;
-               
-              
-               
+                lblRating.Text = "Rating: " + SHGD.Rating.ToString();
+                lblRatingsCount.Text = "Number of ratings: " + SHGD.RatingsCount.ToString();
+                lblRatingTop.Text = "Top score: " + SHGD.RatingTop.ToString();
+                lblRelease.Text = "Released Date: " + SHGD.Released.ToString().Remove(9);
+                //
+                var color = SHGD.DominantColor.ToString().Remove(0, 3);
+                //GamesLayout.BackgroundColor = ColorConverters.FromHex(color);
+                //  GD.Stores[0].StoreStore.Name
+                lstShortScreenshots.ItemsSource = SHGD.ShortScreenshots;
+                lstGenres.ItemsSource = SHGD.Genres;
+                lstPlatform.ItemsSource = SHGD.Platforms;
+                lstStores.ItemsSource = SHGD.Stores;
+
+
+
             }
             else
             {
