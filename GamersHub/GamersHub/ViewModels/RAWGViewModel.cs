@@ -10,103 +10,104 @@ using System.Linq;
 using Xamarin.Forms;
 using System.ComponentModel;
 using System.Windows.Input;
-using RAWGQTSearch;
+using RAWGQT;
 using Xamarin.Forms.Internals;
+using RAWGQTDetail;
 
 namespace GamersHub.ViewModels
 {
 
-    public class RAWGViewModel : INotifyPropertyChanged
+    public class RAWGViewModel  
     {
         //base url
-        string AllGamesURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=20";
+        string AllGamesURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=10";
+        const string APIKEY = "key=cccf617d082948b2820d2b26262789c9";
         const string NEWGAMESURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=20&ordering=released";
         string SearchURL = "https://api.rawg.io/api/games?key=cccf617d082948b2820d2b26262789c9&page_size=10&search=";
+        string DetailsURL = "https://api.rawg.io/api/games/";
         //List for collecting results
         public static List<RAWGQT.Result> datalist = new List<RAWGQT.Result>();
         static HttpClient htp = new HttpClient();
-        ObservableCollection<RAWGQTSearch.Result> games;
+        ObservableCollection<RAWGQT.Result> games;
         // page resuts l
         static string NextSearchResult;
         static string PreviousSearchResult;
         public static string PageCount;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-       
-        public ICommand LoadCommand { get; }
-        public ICommand GetNext { get; }
-        public ICommand GetPrevious { get; }
-        public RAWGViewModel()
+
+
+        //search all games
+        public async Task<ObservableCollection<RAWGQT.Result>> GetAllGamesAsync()
         {
-         //   LoadCommand = new Command<ObservableCollection<RAWGQTSearch.Result>>(GetAllGamesAsync);
-        }
-       
-
-        string name = string.Empty;
-        string urlImg = string.Empty;
-        public string Name
-        {
-            get => name;
-            set
-            {
-                if (name == value)
-                    return;
-
-                name = value;
-                OnPropertyChanged(nameof(name));
-                OnPropertyChanged(nameof(Display));
-            }
-        }
-
-        public string Display => $"Searched For: {Name}";
-
-        void OnPropertyChanged(string name)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
-        //search for the newest games
-        public async Task<ObservableCollection<RAWGQT.Result>> GetAllGamesAsync() 
-        { 
             string response = await htp.GetStringAsync(AllGamesURL);
-            var data = NewReleasedGames.FromJson(response);
-            //datalist = data.Results.ToList<RAWGQT.Result>();
-            ObservableCollection<RAWGQT.Result> games =
-                  new ObservableCollection<RAWGQT.Result>(data.Results.ToList());
+            var data = UserSearchGame.FromJson(response);
+            PageCount = data.Count.ToString();
+            LoadNextPerviousURL(data);
+             // datalist = data.Results.ToList<Result>();
+             games = new ObservableCollection<RAWGQT.Result>(data.Results.ToList());
             return games;
         }
 
+        public async Task<GamesDetails> GetGameDetails(string id)
+        {
+            string response = await htp.GetStringAsync(DetailsURL + id + APIKEY);
+            var data = GamesDetails.FromJson(response);
+            //datalist = data.Results.ToList<RAWGQT.Result>();
+            //ObservableCollection<GamesDetails> gamesinfo =
+             //     new ObservableCollection<GamesDetails>(data);
+            
+            return data;
+        }
+
         //Search for user game
-        public async Task<ObservableCollection<RAWGQTSearch.Result>> SearchGamesAsync(string name)
+        public async Task<ObservableCollection<RAWGQT.Result>> SearchGamesAsync(string name)
         {
             string response = await htp.GetStringAsync(SearchURL + name);
             var data = UserSearchGame.FromJson(response);
             PageCount = data.Count.ToString();
-                //Check for nulls
-                if (data.Next.ToString() == null)
-                {
-
-                }
-                else
-                {
-                    NextSearchResult = data.Next.ToString();
-                }
+            //Check for nulls
+            LoadNextPerviousURL(data);
 
 
-            // datalist = data.Results.ToList<Result>();
-            games = new ObservableCollection<RAWGQTSearch.Result>(data.Results.ToList());
+         // datalist = data.Results.ToList<Result>();
+         games = new ObservableCollection<RAWGQT.Result>(data.Results.ToList());
             return games;
         }
+
+      
 
         //Load Next reasults
-        public async Task<ObservableCollection<RAWGQTSearch.Result>> SearchNextAsync()
-        {  
+        public async Task<ObservableCollection<RAWGQT.Result>> SearchNextAsync()
+        {
             string response = await htp.GetStringAsync(NextSearchResult);
             var data = UserSearchGame.FromJson(response);
+            LoadNextPerviousURL(data);
             // datalist = data.Results.ToList<Result>();
-            games = new ObservableCollection<RAWGQTSearch.Result>(data.Results.ToList());
+            games = new ObservableCollection<RAWGQT.Result>(data.Results.ToList());
             return games;
         }
 
+        private static void LoadNextPerviousURL(UserSearchGame data)
+        {
+            //next
+            if (data.Next == null)
+            {
+                // do nothing
+            }
+            else
+            {
+                NextSearchResult = data.Next.ToString();
+            }
+            //Pervious
+            if(data.Previous == null)
+            {
 
+            }
+            else
+            {
+                PreviousSearchResult = data.Next.ToString();
+
+            }
+        }
     }
 }

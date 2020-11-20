@@ -20,6 +20,8 @@
                         <Label x:Name="lblReviewsTextCount"/>
                     </StackLayout>
                 </StackLayout>
+
+                <Label Text="Hello" FontSize="Body" x:Name="txtDescription"/>
                 
                 <StackLayout >
                     <Label Text="Platforms" Margin="10,0,0,0"  FontSize="Title"/>

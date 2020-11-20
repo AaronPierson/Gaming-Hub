@@ -2,11 +2,11 @@
 //
 // To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
 //
-//    using RAWGQTSearch;
+//    using RAWGQT;
 //
 //    var userSearchGame = UserSearchGame.FromJson(jsonString);
 
-namespace RAWGQTSearch
+namespace RAWGQT
 {
     using System;
     using System.Collections.Generic;
@@ -248,12 +248,12 @@ namespace RAWGQTSearch
 
     public partial class UserSearchGame
     {
-        public static UserSearchGame FromJson(string json) => JsonConvert.DeserializeObject<UserSearchGame>(json, RAWGQTSearch.Converter.Settings);
+        public static UserSearchGame FromJson(string json) => JsonConvert.DeserializeObject<UserSearchGame>(json, RAWGQT.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this UserSearchGame self) => JsonConvert.SerializeObject(self, RAWGQTSearch.Converter.Settings);
+        public static string ToJson(this UserSearchGame self) => JsonConvert.SerializeObject(self, RAWGQT.Converter.Settings);
     }
 
     internal static class Converter

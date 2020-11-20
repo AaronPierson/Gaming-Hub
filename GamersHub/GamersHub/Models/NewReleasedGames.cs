@@ -1,4 +1,4 @@
-﻿namespace RAWGQT
+﻿namespace RAWGQTtest
 {
     using System;
     using System.Collections.Generic;

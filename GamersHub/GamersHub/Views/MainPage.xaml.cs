@@ -30,35 +30,37 @@ namespace GamersHub
             try
             {
                 Games = await model.GetAllGamesAsync();
-                var a = Games[1].Platforms[0].Platform.Name;
+                var a = Games[1].Platforms[0].PlatformPlatform.Name;
                 collectionViewList.ItemsSource = Games;
-            }catch(Exception ex)
-            {
-               
+
             }
-             
-          //  Games[0].BackgroundImage
-           // Games[0].ShortScreenshots[0].Image.
-          
+            catch (Exception ex)
+            {
+                await DisplayAlert("Alert", ex.ToString(), "OK");
+
+            }
+
+            //  Games[0].BackgroundImage
+            // Games[0].ShortScreenshots[0].Image.
+
         }
 
         private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
             try
-            {
-                
+            {   
                 
                 //collectionViewList.ItemsSource = Games;
                 //var a = Games[1].ParentPlatforms[0].Platform.Name;
                 collectionViewList.ItemsSource = await model.SearchGamesAsync(e.NewTextValue);
                 //lblCount.Text = RAWGViewModel.PageCount;
-                // await Task.Delay(2000);
+                
             }
             catch (Exception ex)
             {
-
+                await DisplayAlert("Alert", ex.ToString(), "OK");
             }
-           
+
         }
 
         private async void btnNextPage_Clicked(object sender, EventArgs e)
@@ -68,11 +70,20 @@ namespace GamersHub
 
         private async void collectionViewList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            try
+            {
+                var gd = e.CurrentSelection[0];
+                await Navigation.PushAsync(new GameDetails(gd));
+
+                // Application.Current.MainPage.Navigation.PushAsync(GameDetails);
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Alert", ex.ToString(), "OK");
+
+            }
             //  var Gamedetails = new GameDetails();
-            var gd = e.CurrentSelection[0];
-            await Navigation.PushAsync(new GameDetails(gd));
-           
-           // Application.Current.MainPage.Navigation.PushAsync(GameDetails);
+
 
         }
 
