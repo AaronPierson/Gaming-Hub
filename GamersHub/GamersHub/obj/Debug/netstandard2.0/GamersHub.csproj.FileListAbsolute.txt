@@ -1,17 +1,3 @@
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Debug\netstandard2.0\GamersHub.deps.json
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Debug\netstandard2.0\GamersHub.dll
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Debug\netstandard2.0\ref\GamersHub.dll
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Debug\netstandard2.0\GamersHub.pdb
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.AssemblyInfoInputs.cache
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.AssemblyInfo.cs
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.dll
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\ref\GamersHub.dll
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.pdb
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.csprojAssemblyReference.cache
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.csproj.CoreCompileInputs.cache
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\bin\Debug\netstandard2.0\GamersHub.deps.json
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\bin\Debug\netstandard2.0\GamersHub.dll
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\bin\Debug\netstandard2.0\ref\GamersHub.dll
@@ -26,5 +12,18 @@ C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\obj\Debug\netstandard2.0\Xam
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.dll
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\obj\Debug\netstandard2.0\ref\GamersHub.dll
 C:\Users\rpgam\Documents\GitHub\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.pdb
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Debug\netstandard2.0\GamersHub.deps.json
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Debug\netstandard2.0\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Debug\netstandard2.0\ref\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Debug\netstandard2.0\GamersHub.pdb
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\Views\GameDetails.xaml.g.cs
 C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\Views\MainMenu.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.AssemblyInfoInputs.cache
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.AssemblyInfo.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.csproj.CoreCompileInputs.cache
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\ref\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Debug\netstandard2.0\GamersHub.pdb

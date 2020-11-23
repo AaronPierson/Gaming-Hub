@@ -1,4 +1,5 @@
 ﻿using GamersHub.ViewModels;
+using RAWGQTDetail;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,50 +16,52 @@ namespace GamersHub.Views
     public partial class GameDetails : ContentPage
     {
         RAWGQT.Result SHGD;
-        RAWGQT.Result GD;
-        bool usingSearchType;
         //private object gd;
         RAWGViewModel model = new RAWGViewModel();
-       
+        GamesDetails data = new GamesDetails();
         public GameDetails(object gd)
         {
             InitializeComponent();
-          //  print(a.GetType() == typeof(Animal))
-          //check type
-            if(gd.GetType() == typeof(RAWGQT.Result))
-            {
-                SHGD = (RAWGQT.Result)gd;
-                usingSearchType = true;
-             //   var data = model.GetGameDetails(GD.Id.ToString());
-                // lblTitle.Text = data.Result.Description;
-            }
+            SHGD = (RAWGQT.Result)gd;
         }
 
-        private void ContentPage_Appearing(object sender, EventArgs e)
+        private async Task GetDetails()
         {
-            if(usingSearchType == true)
+            data = await model.GetGameDetails(SHGD.Id.ToString());
+        }
+
+        private async void ContentPage_Appearing(object sender, EventArgs e)
+        {
+            try
             {
-                txtDescription.Text = SHGD.Name;
-                lblTitle.Text = SHGD.Name;
-                lblPlaytime.Text = "Estimate completion time: " + SHGD.Playtime.ToString();
-                imgGame.Source = SHGD.BackgroundImage;
-                lblRating.Text = "Rating: " + SHGD.Rating.ToString();
-                lblRatingsCount.Text = "Number of ratings: " + SHGD.RatingsCount.ToString();
-                lblRatingTop.Text = "Top score: " + SHGD.RatingTop.ToString();
-                lblRelease.Text = "Released Date: " + SHGD.Released.ToString().Remove(9);
+                await GetDetails();
+                
+                txtDescription.Text = data.DescriptionRaw.ToString();
+                lblTitle.Text = data.Name;
+                lblPlaytime.Text = "Estimate completion time: " + data.Playtime.ToString();
+                imgGame.Source = data.BackgroundImage;
+                lblRating.Text = "Rating: " + data.Rating.ToString();
+                lblRatingsCount.Text = "Number of ratings: " + data.RatingsCount.ToString();
+                lblRatingTop.Text = "Top score: " + data.RatingTop.ToString();
+                lblRelease.Text = "Released Date: " + data.Released.ToString().Remove(9);
                 //
                 var color = SHGD.DominantColor.ToString().Remove(0, 3);
                 //GamesLayout.BackgroundColor = ColorConverters.FromHex(color);
                 //  GD.Stores[0].StoreStore.Name
                 lstShortScreenshots.ItemsSource = SHGD.ShortScreenshots;
-                lstGenres.ItemsSource = SHGD.Genres;
-                lstPlatform.ItemsSource = SHGD.Platforms;
-                lstStores.ItemsSource = SHGD.Stores;
+                lstGenres.ItemsSource = data.Genres;
+                lstPlatform.ItemsSource = data.Platforms;
+                lstStores.ItemsSource = data.Stores;
+                // collectionViewList.ItemsSource = GD;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Alert", ex.ToString(), "OK");
 
             }
-           
-           // collectionViewList.ItemsSource = GD;
-            
+
+
+
         }
     }
 }

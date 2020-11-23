@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GamersHub.Views.GameDetails"
-             Appearing="ContentPage_Appearing">
+             Appearing="ContentPage_Appearing"
+           Title="Game Details" >
     <ContentPage.Content>
         
         <ScrollView>
@@ -21,7 +22,7 @@
                     </StackLayout>
                 </StackLayout>
 
-                <Label Text="Hello" FontSize="Body" x:Name="txtDescription"/>
+                <Label Text="Hello" FontSize="Body" x:Name="txtDescription" Margin="12"/>
                 
                 <StackLayout >
                     <Label Text="Platforms" Margin="10,0,0,0"  FontSize="Title"/>

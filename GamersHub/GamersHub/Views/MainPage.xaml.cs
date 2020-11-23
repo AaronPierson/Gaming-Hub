@@ -22,16 +22,18 @@ namespace GamersHub
            // BindingContext = new MainPage();
           
         }
-        RAWGViewModel model = new RAWGViewModel();
+        RAWGViewModel RAWGVM = new RAWGViewModel();
         public ObservableCollection<Result> Games { get; set; }
         private async void ContentPage_Appearing(object sender, EventArgs e)
         {
 
             try
             {
-                Games = await model.GetAllGamesAsync();
+                Games = await RAWGVM.GetAllGamesAsync();
                 var a = Games[1].Platforms[0].PlatformPlatform.Name;
                 collectionViewList.ItemsSource = Games;
+
+               
 
             }
             catch (Exception ex)
@@ -40,19 +42,20 @@ namespace GamersHub
 
             }
 
-            //  Games[0].BackgroundImage
-            // Games[0].ShortScreenshots[0].Image.
+           
 
         }
 
         private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
             try
-            {   
-                
+            {
+                SearchBar searchBar = (SearchBar)sender;
+               
                 //collectionViewList.ItemsSource = Games;
                 //var a = Games[1].ParentPlatforms[0].Platform.Name;
-                collectionViewList.ItemsSource = await model.SearchGamesAsync(e.NewTextValue);
+                collectionViewList.ItemsSource = await RAWGVM.SearchGamesAsync(searchBar.Text); 
+                //collectionViewList.ItemsSource = await RAWGVM.SearchGamesAsync(e.NewTextValue);
                 //lblCount.Text = RAWGViewModel.PageCount;
                 
             }
@@ -65,7 +68,8 @@ namespace GamersHub
 
         private async void btnNextPage_Clicked(object sender, EventArgs e)
         {
-            collectionViewList.ItemsSource = await model.SearchNextAsync();
+          
+            collectionViewList.ItemsSource = await RAWGVM.SearchNextAsync();
         }
 
         private async void collectionViewList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -86,6 +90,32 @@ namespace GamersHub
 
 
         }
+
+        private async void btnBackPage_Clicked(object sender, EventArgs e)
+        {
+            collectionViewList.ItemsSource = await RAWGVM.SearchPerviousAsync();
+        }
+
+        private async void SearchBar_SearchButtonPressed(object sender, EventArgs e)
+        {
+            try
+            {
+                SearchBar searchBar = (SearchBar)sender;
+                //collectionViewList.ItemsSource = Games;
+                //var a = Games[1].ParentPlatforms[0].Platform.Name;
+                collectionViewList.ItemsSource = await RAWGVM.SearchGamesAsync(searchBar.Text);
+                //lblCount.Text = RAWGViewModel.PageCount;
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Alert", ex.ToString(), "OK");
+            }
+        }
+
+
+
+
 
         //  Games = await model.GetAllGamesAsync();
         //collectionViewList.ItemsSource = Games;

@@ -10,7 +10,6 @@ using System.Linq;
 using Xamarin.Forms;
 using System.ComponentModel;
 using System.Windows.Input;
-using RAWGQT;
 using Xamarin.Forms.Internals;
 using RAWGQTDetail;
 
@@ -33,8 +32,13 @@ namespace GamersHub.ViewModels
         static string NextSearchResult;
         static string PreviousSearchResult;
         public static string PageCount;
-
-
+        //
+        public Command NextCommand { get; }
+  
+        public RAWGViewModel()
+        {
+            
+        }
 
         //search all games
         public async Task<ObservableCollection<RAWGQT.Result>> GetAllGamesAsync()
@@ -50,7 +54,7 @@ namespace GamersHub.ViewModels
 
         public async Task<GamesDetails> GetGameDetails(string id)
         {
-            string response = await htp.GetStringAsync(DetailsURL + id + APIKEY);
+            string response = await htp.GetStringAsync(DetailsURL + id + "?" + APIKEY);
             var data = GamesDetails.FromJson(response);
             //datalist = data.Results.ToList<RAWGQT.Result>();
             //ObservableCollection<GamesDetails> gamesinfo =
@@ -87,7 +91,18 @@ namespace GamersHub.ViewModels
             return games;
         }
 
-        private static void LoadNextPerviousURL(UserSearchGame data)
+        //Load Pervious reasults
+        public async Task<ObservableCollection<RAWGQT.Result>> SearchPerviousAsync()
+        {
+            string response = await htp.GetStringAsync(PreviousSearchResult);
+            var data = UserSearchGame.FromJson(response);
+            LoadNextPerviousURL(data);
+            // datalist = data.Results.ToList<Result>();
+            games = new ObservableCollection<RAWGQT.Result>(data.Results.ToList());
+            return games;
+        }
+
+        public static void LoadNextPerviousURL(UserSearchGame data)
         {
             //next
             if (data.Next == null)
@@ -105,7 +120,7 @@ namespace GamersHub.ViewModels
             }
             else
             {
-                PreviousSearchResult = data.Next.ToString();
+                PreviousSearchResult = data.Previous.ToString();
 
             }
         }
