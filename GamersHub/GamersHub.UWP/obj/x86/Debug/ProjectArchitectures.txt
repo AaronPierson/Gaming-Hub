@@ -1,1 +1,0 @@
-C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub.UWP\GamersHub.UWP.csproj;x86
