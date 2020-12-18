@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="GamersHub.Views.PageViews.Details.Info">
+  <ContentView.Content>
+        <StackLayout>
+            
+            <StackLayout >
+                <Label Text="Platforms" Margin="0,0,0,0"  FontSize="Subtitle" FontAttributes="Bold" Padding="20,7,0,7"/>
+                <CollectionView x:Name="lstPlatform" Margin="0" ItemsSource="{Binding Platforms}"
+                                ItemsLayout="HorizontalGrid" HeightRequest="50">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding Platform.Name}" Margin="10"/>
+                                <Label Text="{Binding PlatformPlatform.Name}" Margin="10"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+            <StackLayout>
+
+                <Label Text="Stores"  FontSize="Subtitle" FontAttributes="Bold"  Padding="20,7,0,7"/>
+                <CollectionView x:Name="lstStores" HeightRequest="50"  ItemsSource="{Binding Stores}"
+                                 Margin="0" ItemsLayout="HorizontalGrid">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout >
+                                <Label Text="{Binding StoreStore.Name}" Margin="10" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+
+            <Label Text="Genres" FontSize="Subtitle" FontAttributes="Bold" Padding="20,7,0,7"/>
+            <CollectionView x:Name="lstGenres" SelectionMode="None" 
+                             ItemsSource="{Binding Genres}"
+                            HeightRequest="{OnIdiom Phone=50, Tablet=50, Desktop=100}" ItemsLayout="HorizontalGrid">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" Margin="10"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <Label Text="Screen Shots" Margin="0,0,0,0"  FontSize="Subtitle" FontAttributes="Bold" Padding="20,7,0,7"/>
+            <CollectionView x:Name="lstShortScreenshots" SelectionMode="Single" SelectionChanged="lstShortScreenshots_SelectionChanged"
+                     HeightRequest="150" ItemsLayout="HorizontalGrid" Margin="0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <ffimageloading:CachedImage Source="{Binding Image}" Margin="10" BackgroundColor="Black"
+                                   HeightRequest="{OnIdiom Phone=200, Tablet=400, Desktop=600}" DownsampleHeight="720"
+                                           WidthRequest="{OnIdiom Phone=200, Tablet=200, Desktop=600}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
