@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:local="clr-namespace:GamersHub.Views" 
+            xmlns:local1="clr-namespace:GamersHub" xmlns:pageviews="clr-namespace:GamersHub.Views.PageViews"
+            x:Class="GamersHub.Views.UserTabView" Title="Gamer's Hub">
+  <!--Pages can be added as references or inline-->
+    <local:MainMenu Title="Home"/>
+    <local1:SearchView Title="Search"/>
+    <pageviews:UserProfile Title="Profile"/>
+</TabbedPage>

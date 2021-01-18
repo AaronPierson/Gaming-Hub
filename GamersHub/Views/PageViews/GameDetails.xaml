@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:tabs="http://sharpnado.com" xmlns:details="clr-namespace:GamersHub.Views.PageViews.Details" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:dxui="http://dips.xamarin.ui.com"
+             x:Class="GamersHub.Views.GameDetails"
+             Appearing="ContentPage_Appearing"
+             Title="{Binding Name}" 
+             Disappearing="ContentPage_Disappearing">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TabStyle" TargetType="tabs:UnderlinedTabItem">
+                <Setter Property="SelectedTabColor" Value="SkyBlue" />
+                <Setter Property="FontFamily" Value="FontSemiBold" />
+                <Setter Property="LabelSize" Value="14" />
+                <Setter Property="Padding" Value="20, 0" />
+                <Setter Property="UnderlineAllTab" Value="False" />
+                <Setter Property="UnselectedLabelColor" Value="Black" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <dxui:ModalityLayout>
+        <dxui:ModalityLayout.Behaviors>
+            <dxui:SheetBehavior Alignment="Top" x:Name="Sheet"
+                                ContentColor="#2196f3">
+                <dxui:SheetBehavior.SheetContentTemplate>
+                    <DataTemplate>
+                        <!-- sheet content goes here -->
+                        <StackLayout Orientation="Horizontal" Padding="10" HorizontalOptions="CenterAndExpand">
+                            <Button Text="Wanted" HorizontalOptions="StartAndExpand" TextColor="white" Clicked="Wanted_Clicked"
+                                    dxui:Modality.CloseOnClick="True" BackgroundColor="#2196f3" x:Name="Wanted"/>
+                            <Button Text="Playing" HorizontalOptions="CenterAndExpand" TextColor="white" Clicked="Playing_Clicked"
+                                    dxui:Modality.CloseOnClick="True" BackgroundColor="#2196f3" x:Name="Playing"/>
+                            <Button Text="Finished" HorizontalOptions="EndAndExpand" TextColor="white" Clicked="Finished_Clicked"
+                                    dxui:Modality.CloseOnClick="True" BackgroundColor="#2196f3" x:Name="Finished"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </dxui:SheetBehavior.SheetContentTemplate>
+            </dxui:SheetBehavior>
+        </dxui:ModalityLayout.Behaviors>
+        <!-- page content goes here -->
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <yummy:PancakeView CornerRadius="300">
+                        <ffimageloading:CachedImage x:Name="imgGame" Margin="10" Grid.Column="0"  DownsampleHeight="1080" 
+                       WidthRequest="{OnIdiom Phone=200, Tablet=300, Desktop=800}"/>
+                    </yummy:PancakeView>
+                    <StackLayout Orientation="Vertical" Grid.Column="2" Margin="0,25,4,0">
+                        <Label x:Name="lblTitle" FontAttributes="Bold" FontSize="{OnIdiom Phone=20, Tablet=25, Desktop=40}" />
+                        <Label x:Name="lblRelease" FontSize="{OnIdiom Phone=13, Tablet=20, Desktop=30}"/>
+                        <Label x:Name="lblPlaytime" FontSize="{OnIdiom Phone=13, Tablet=20, Desktop=30}"/>
+                        <Label x:Name="lblRating" FontSize="{OnIdiom Phone=13, Tablet=20, Desktop=30}"/>
+                        <Label x:Name="lblReviewsTextCount" FontSize="{OnIdiom Phone=15, Tablet=20, Desktop=30}"/>
+                    </StackLayout>
+                </StackLayout>
+                <tabs:TabHostView x:Name="TabHost"
+                      Margin="-16,0"
+                      SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}">
+                    <tabs:TabHostView.Tabs>
+                        <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="Details" LabelSize="15" />
+                        <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="Description" LabelSize="15"/>
+                        <tabs:UnderlinedTabItem Style="{StaticResource TabStyle}" Label="Acheveiments" LabelSize="15"/>
+                    </tabs:TabHostView.Tabs>
+                </tabs:TabHostView>
+                <tabs:ViewSwitcher x:Name="Switcher"
+                           Animate="True"
+                           SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}">
+                    <details:Info Animate="True"/>
+                    <details:Description Animate="True"/>
+                    <details:Achievements Animate="True" />
+                </tabs:ViewSwitcher>
+
+            </StackLayout>
+        </ScrollView>
+    </dxui:ModalityLayout>
+    <ContentPage.Content>
+        <!--<ListView x:Name="Ratings ">
+                </ListView> -->
+        <!--
+    <CollectionView x:Name="lstTags " >
+                    </CollectionView>-->
+        <!--  <CollectionView x:Name="lstCommunityRating">
+                </CollectionView> -->
+    </ContentPage.Content>
+</ContentPage>
+

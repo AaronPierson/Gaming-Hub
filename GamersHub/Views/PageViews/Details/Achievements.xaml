@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             x:Class="GamersHub.Views.PageViews.Details.Achievements">
+    <ContentView.Content>
+      <StackLayout VerticalOptions="StartAndExpand">
+            <ScrollView>
+                <CollectionView SelectionMode="None" EmptyView="No Achievements available"
+                             ItemsSource="{Binding Genres}" x:Name="lstAchievements" 
+                            HeightRequest="{OnIdiom Phone=500, Tablet=600, Desktop=7 00}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal">
+                                <ffimageloading:CachedImage 
+                                        Source="{Binding Image}" 
+                                        Aspect="AspectFill"
+                                        DownsampleHeight="720" 
+                                         HeightRequest="100" 
+                                        WidthRequest="100"/>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name}" Margin="10" FontSize="Subtitle"/>
+                                    <Label Text="{Binding Description}" Margin="10" FontSize="Body"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+
+            <!--Ads for andriod-->
+            <controls:MTAdView x:Name="myAds" IsVisible="true" PersonalizedAds="true" AdsId="ca-app-pub-1387996564780038/4737123107"
+                               VerticalOptions="EndAndExpand">
+                <controls:MTAdView.HeightRequest>
+                    <x:OnIdiom>
+                        <x:OnIdiom.Phone>50</x:OnIdiom.Phone>
+                        <x:OnIdiom.Tablet>90</x:OnIdiom.Tablet>
+                        <x:OnIdiom.Desktop>90</x:OnIdiom.Desktop>
+                    </x:OnIdiom>
+                </controls:MTAdView.HeightRequest>
+            </controls:MTAdView>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

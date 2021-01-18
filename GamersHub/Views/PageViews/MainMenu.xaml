@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"            
+             x:Class="GamersHub.Views.MainMenu" Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <StackLayout >
+
+            <ScrollView>
+                <StackLayout>
+                  
+                    
+                    
+                    <!--UpCommingGames-->
+                    <yummy:PancakeView>
+                        <StackLayout>
+                            <Label Text="Up Coming games" FontAttributes="Bold" FontSize="Subtitle"
+                           HorizontalTextAlignment="Start" Padding="8" />
+                            <CollectionView ItemsLayout="HorizontalGrid" HeightRequest="200" SelectionChanged="CollectionView_SelectionChanged"
+                        EmptyView="Loading" SelectionMode="Single" x:Name="cvUpComing" >
+                                <CollectionView.ItemTemplate >
+                                    <DataTemplate >
+                                        <Grid Padding="10">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="{OnIdiom Phone=65, Tablet=80, Desktop=120}" />
+                                                <RowDefinition Height="{OnIdiom Phone=65, Tablet=80, Desktop=120}" />
+                                                <RowDefinition Height="{OnIdiom Phone=30, Tablet=30, Desktop=120}" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="{OnIdiom Phone=140, Tablet=140, Desktop=180}" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <yummy:PancakeView CornerRadius="30" Grid.RowSpan="2">
+                                                <yummy:PancakeView.Border>
+                                                    <yummy:Border Color="#000000" Thickness="2" />
+                                                </yummy:PancakeView.Border>
+                                                <yummy:PancakeView.Shadow>
+                                                    <yummy:DropShadow Color="#000000" Offset="10,10" BlurRadius="20"/>
+                                                </yummy:PancakeView.Shadow>
+                                                <ffimageloading:CachedImage  
+                                                    Source="{Binding BackgroundImage}" 
+                                                    Aspect="AspectFill"
+                                                    DownsampleHeight="360" 
+                                                     HeightRequest="65" 
+                                                    WidthRequest="150"/>
+                                            </yummy:PancakeView>
+                                            <Label Text="{Binding Name}" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                                         LineBreakMode="TailTruncation" Grid.Row="2"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>                   
+                    </yummy:PancakeView>
+                 
+                    <!--latest-->
+                    <yummy:PancakeView>
+                        <StackLayout>
+                            <Label Text="Latest Releases" FontAttributes="Bold" FontSize="Subtitle"
+                           HorizontalTextAlignment="Start" Padding="8"/>
+                            <CollectionView ItemsLayout="HorizontalGrid" HeightRequest="200" SelectionChanged="CollectionView_SelectionChanged"
+                        EmptyView="Loading" SelectionMode="Single"  x:Name="cvLatest">
+                                <CollectionView.ItemTemplate >
+                                    <DataTemplate >
+                                        <Grid Padding="10">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="{OnIdiom Phone=65, Tablet=80, Desktop=120}" />
+                                                <RowDefinition Height="{OnIdiom Phone=65, Tablet=80, Desktop=120}" />
+                                                <RowDefinition Height="{OnIdiom Phone=30, Tablet=30, Desktop=120}" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="{OnIdiom Phone=140, Tablet=140, Desktop=180}" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <yummy:PancakeView CornerRadius="30" Grid.RowSpan="2">
+                                                <yummy:PancakeView.Border>
+                                                    <yummy:Border Color="#000000" Thickness="2" />
+                                                </yummy:PancakeView.Border>
+                                                <yummy:PancakeView.Shadow>
+                                                    <yummy:DropShadow Color="#000000" Offset="10,10" BlurRadius="25"/>
+                                                </yummy:PancakeView.Shadow>
+                                                <ffimageloading:CachedImage  
+                                                    Source="{Binding BackgroundImage}" 
+                                                    Aspect="AspectFill"
+                                                    DownsampleHeight="480" 
+                                                     HeightRequest="65" 
+                                                    WidthRequest="150"/>    
+                                            </yummy:PancakeView>
+                                                <Label Text="{Binding Name}" FontAttributes="Bold"
+                                         LineBreakMode="TailTruncation" HorizontalTextAlignment="Center" Grid.Row="2"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </yummy:PancakeView>
+              
+                    <!--Ads for andriod-->
+                    <controls:MTAdView x:Name="myAds" IsVisible="true" PersonalizedAds="true" AdsId="ca-app-pub-1387996564780038/4737123107"
+                               VerticalOptions="EndAndExpand">
+                        <controls:MTAdView.HeightRequest>
+                            <x:OnIdiom>
+                                <x:OnIdiom.Phone>50</x:OnIdiom.Phone>
+                                <x:OnIdiom.Tablet>90</x:OnIdiom.Tablet>
+                                <x:OnIdiom.Desktop>90</x:OnIdiom.Desktop>
+                            </x:OnIdiom>
+                        </controls:MTAdView.HeightRequest>
+                    </controls:MTAdView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

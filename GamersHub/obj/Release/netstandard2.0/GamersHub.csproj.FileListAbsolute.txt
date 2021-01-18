@@ -1,0 +1,56 @@
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Release\netstandard2.0\GamersHub.deps.json
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Release\netstandard2.0\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Release\netstandard2.0\ref\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\bin\Release\netstandard2.0\GamersHub.pdb
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\GameDetails.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\MainMenu.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.AssemblyInfoInputs.cache
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.AssemblyInfo.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.csproj.CoreCompileInputs.cache
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\ref\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.pdb
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.csprojAssemblyReference.cache
+C:\Users\rpgam\Documents\Visual Studio Projects\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\testTabbedPage.xaml.g.cs
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\bin\Release\netstandard2.0\GamersHub.deps.json
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\bin\Release\netstandard2.0\GamersHub.dll
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\bin\Release\netstandard2.0\ref\GamersHub.dll
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\bin\Release\netstandard2.0\GamersHub.pdb
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\GamersHub.csprojAssemblyReference.cache
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\Views\PageViews\GameDetails.xaml.g.cs
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\Views\PageViews\MainMenu.xaml.g.cs
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\Views\PageViews\SearchView.xaml.g.cs
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\Views\UserTabView.xaml.g.cs
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\GamersHub.AssemblyInfoInputs.cache
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\GamersHub.AssemblyInfo.cs
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\GamersHub.csproj.CoreCompileInputs.cache
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\GamersHub.dll
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\ref\GamersHub.dll
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\GamersHub.pdb
+C:\Users\rpgam\OneDrive\SoftwereDev\Apps\GamersHub\Bulid 5\GamersHub-frombuild2\GamersHub\obj\Release\netstandard2.0\Views\PopUps\ScreenShotPop.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\bin\Release\netstandard2.0\GamersHub.deps.json
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\bin\Release\netstandard2.0\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\bin\Release\netstandard2.0\ref\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\bin\Release\netstandard2.0\GamersHub.pdb
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.csprojAssemblyReference.cache
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\PageViews\Details\Achievements.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\PageViews\Details\Description.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\PageViews\Details\Info.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\PageViews\GameDetails.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\PageViews\MainMenu.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\PageViews\SearchView.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\PopUps\ScreenShotPop.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\Views\UserTabView.xaml.g.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.AssemblyInfoInputs.cache
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.AssemblyInfo.cs
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.csproj.CoreCompileInputs.cache
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\ref\GamersHub.dll
+C:\Users\rpgam\Documents\Visual Studio Projects\Bulid 5\GamersHub\GamersHub\obj\Release\netstandard2.0\GamersHub.pdb

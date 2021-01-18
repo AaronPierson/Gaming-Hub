@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:GamersHub.ViewModels" xmlns:viewModels1="clr-namespace:GamersHub"
+             x:Class="GamersHub.SearchView"
+             Title="Search"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob" 
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             Appearing="ContentPage_Appearing">
+    
+    <!--xmlns:ads="clr-namespace:GamersHub.Controls"-->
+    <ContentPage.BindingContext>
+        <viewModels:RAWGViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <!--<Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+        </Grid>-->
+        <StackLayout>
+
+            <SearchBar Placeholder="Game Search" FontAttributes="Bold" Margin="0" HorizontalTextAlignment="Center"
+                    Text="{Binding Name}" TextChanged="SearchBar_TextChanged" SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+
+            <ScrollView>
+                <CollectionView ItemsLayout="VerticalGrid"
+                        EmptyView="Loading"
+                    SelectionMode="Single"
+                                x:Name="collectionViewList"                                
+                               SelectionChanged="collectionViewList_SelectionChanged" >
+
+                    <CollectionView.ItemTemplate >
+                        <DataTemplate >
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="{OnIdiom Phone=65, Tablet=80, Desktop=120}" />
+                                    <RowDefinition Height="{OnIdiom Phone=65, Tablet=80, Desktop=120}" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="{OnIdiom Phone=125, Tablet=160, Desktop=180}" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <yummy:PancakeView CornerRadius="30" Grid.RowSpan="2">
+                                    <yummy:PancakeView.Border>
+                                        <yummy:Border Color="#000000" Thickness="2" />
+                                    </yummy:PancakeView.Border>
+                                    <yummy:PancakeView.Shadow>
+                                        <yummy:DropShadow Color="#000000" Offset="10,10" BlurRadius="25"/>
+                                    </yummy:PancakeView.Shadow>
+                                    <ffimageloading:CachedImage Grid.RowSpan="2" 
+                               Source="{Binding BackgroundImage}" 
+                               Aspect="AspectFill"
+                               DownsampleHeight="480"/>
+                                </yummy:PancakeView>
+                                <StackLayout Grid.Column="1" Margin="{OnIdiom Phone=0, Tablet=15}">
+                                    <Label FontSize="Title"
+                                       Text="{Binding Name}" 
+                                       FontAttributes="Bold"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Genres[0].Name}" FontAttributes="Bold" FontSize="Subtitle"/>
+                                        <Label Text="{Binding Genres[1].Name}" FontAttributes="Bold" FontSize="Subtitle"/>
+                                        <Label Text="{Binding Genres[2].Name}" FontAttributes="Bold" FontSize="Subtitle"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Platforms[0].PlatformPlatform.Name}" 
+                                             FontAttributes="Bold" FontSize="Subtitle"/>
+                                        <Label Text="{Binding Platforms[1].PlatformPlatform.Name}" 
+                                             FontAttributes="Bold" FontSize="Subtitle"/>
+                                        <Label Text="{Binding Platforms[3].PlatformPlatform.Name}" 
+                                                FontAttributes="Bold"
+                                                LineBreakMode="TailTruncation" FontSize="Subtitle"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+
+           
+
+            <!--Movement buttons-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                      HeightRequest="50" Margin="10,8">
+                <yummy:PancakeView CornerRadius="100" HorizontalOptions="StartAndExpand">
+                    <yummy:PancakeView.Shadow>
+                        <yummy:DropShadow Color="#000000" Offset="10,10" BlurRadius="25"/>
+                    </yummy:PancakeView.Shadow>
+                    <Button Text="Pervious" HorizontalOptions="StartAndExpand" 
+                        x:Name="btnBackPage" Clicked="btnBackPage_Clicked" BackgroundColor="SkyBlue"
+                       WidthRequest="100" />
+                </yummy:PancakeView>
+              
+                <yummy:PancakeView CornerRadius="100" HorizontalOptions="EndAndExpand">
+                    <yummy:PancakeView.Shadow>
+                        <yummy:DropShadow Color="#000000" Offset="10,10" BlurRadius="25"/>
+                    </yummy:PancakeView.Shadow>
+                    <Button Text="Next" HorizontalOptions="EndAndExpand" BackgroundColor="SkyBlue"
+                    x:Name="btnNextPage" Clicked="btnNextPage_Clicked" WidthRequest="100"/>
+                </yummy:PancakeView>
+               
+            </StackLayout>
+           
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
